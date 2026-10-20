@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout codes
-        run: actions/checkout@v4
+        use: actions/checkout@v4
       - name: list repositories
        run: ls -la
       - name: hello user
