@@ -2,11 +2,17 @@ name: Hello world
 
 on:
   workflow_dispatch:   # lets you run manually
+  push: 
+    branches: [main]
 
 jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout codes
+        run: actions/checkout@v4
+      - name: list repositories
+       run: ls -la
       - name: hello user
         run: echo "Hello from github actions"
       - name: show some info about the runner
