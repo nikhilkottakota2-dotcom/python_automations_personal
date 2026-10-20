@@ -12,7 +12,7 @@ jobs:
       - name: checkout codes
         use: actions/checkout@v4
       - name: list repositories
-       run: ls -la
+        run: ls -la
       - name: hello user
         run: echo "Hello from github actions"
       - name: show some info about the runner
