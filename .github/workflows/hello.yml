@@ -5,10 +5,10 @@ jobs:
   say_hello:
   runs-on: ubuntu-latest
   steps:
-   - name: hello user
-     run: echo "Hello from github actions"
-   - name: show some info about the runner
-     run: |
-        echo "Repo: ${{github.repository}}"
-        echo "Triggered by: ${{github.actor}}
-        uname -a
+     - name: hello user
+       run: echo "Hello from github actions"
+     - name: show some info about the runner
+       run: |
+          echo "Repo: ${{github.repository}}"
+          echo "Triggered by: ${{github.actor}}
+          uname -a
