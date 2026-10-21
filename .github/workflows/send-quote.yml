@@ -1,0 +1,24 @@
+name: Send weekly quote
+
+on:
+  schedule:
+    - cron: "50 8 * * *"     # every Sunday at 9:00 AM IST
+  workflow_dispatch:         # manual button for testing
+
+jobs:
+  send_quote:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Send the quote
+        env:
+          MY_MAIL: ${{ secrets.MY_MAIL }}
+          MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
+        run: python scripts/send_quote.py
