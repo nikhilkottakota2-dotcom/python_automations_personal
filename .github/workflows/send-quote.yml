@@ -21,4 +21,4 @@ jobs:
         env:
           MY_MAIL: ${{ secrets.MY_MAIL }}
           MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
-        run: python scripts/send_quote.py
+        run: python scripts/main.py
