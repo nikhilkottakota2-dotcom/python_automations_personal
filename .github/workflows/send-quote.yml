@@ -2,7 +2,7 @@ name: Send weekly quote
 
 on:
   schedule:
-    - cron: "0 15 * * *"     # every Sunday at 9:00 AM IST
+    - cron: "5 6 * * *"     # every Sunday at 9:00 AM IST
   workflow_dispatch:         # manual button for testing
 
 jobs:
