@@ -29,7 +29,7 @@ def main():
     quote = random.choice(quotes)  # same quote for everyone this week
     sent, failed = 0, []
 
-    with smtplib.SMTP("smtp.gmail.com") as connection:
+    with smtplib.SMTP("smtp.gmail.com",587) as connection:
         connection.starttls()
         connection.login(MY_MAIL, MY_PASSWORD)
 
