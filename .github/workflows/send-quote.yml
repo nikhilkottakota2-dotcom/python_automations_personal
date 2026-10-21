@@ -2,7 +2,7 @@ name: Send weekly quote
 
 on:
   schedule:
-    - cron: "15 9 * * *"     # every Sunday at 9:00 AM IST
+    - cron: "30 9 * * *"     # every Sunday at 9:00 AM IST
   workflow_dispatch:         # manual button for testing
 
 jobs:
@@ -22,4 +22,4 @@ jobs:
         env:
           MY_MAIL: ${{ secrets.MY_MAIL }}
           MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
-        run: python scripts/main.py
+        run: python main.py
