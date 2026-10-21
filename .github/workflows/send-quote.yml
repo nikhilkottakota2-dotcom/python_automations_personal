@@ -18,8 +18,8 @@ jobs:
           python-version: "3.12"
 
       - name: Send the quote
-        working-directory: motivational_mails
         env:
           MY_MAIL: ${{ secrets.MY_MAIL }}
           MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
+        working-directory: motivational_mails
         run: python main.py
